@@ -1,0 +1,24 @@
+# Ignorar node_modules (carpeta pesada con dependencias)
+node_modules/
+
+# Ignorar archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar entorno
+.env
+
+# Ignorar cachés de VSCode y otros editores
+.vscode/
+.idea/
+*.swp
+
+# Ignorar archivos ZIP o comprimidos
+*.zip
+*.rar
+*.7z
