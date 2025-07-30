@@ -1,0 +1,274 @@
+{
+  "users": [
+    {
+      "name": "cielo",
+      "email": "cielo@carbon.com",
+      "password": "1234"
+    }
+  ],
+  "empresas": [
+    {
+      "nombre": "EcoTech",
+      "sector": "tecnología",
+      "ubicacion": "Bogotá "
+    },
+    {
+      "nombre": "BioTech",
+      "sector": "tecnología",
+      "ubicacion": "Bogotá "
+    },
+    {
+      "nombre": "livetech",
+      "sector": "tecnología",
+      "ubicacion": "Bogotá "
+    },
+    {
+      "nombre": "GreenHarvest Agro ",
+      "sector": "Agricultura Sostenible ",
+      "ubicacion": "Medellín Colombia "
+    },
+    {
+      "nombre": "AquaFlow Utilities ",
+      "sector": "Servicios Publicos ",
+      "ubicacion": "Cali Colombia "
+    },
+    {
+      "nombre": "SolarBright Energy ",
+      "sector": "Energias Renovables ",
+      "ubicacion": "Barranquilla Colombia "
+    },
+    {
+      "nombre": "UrbanTransit Co",
+      "sector": "Transporte Urbano",
+      "ubicacion": "Cartagena Colombia "
+    },
+    {
+      "nombre": "BioPharma Innova",
+      "sector": "Farmacéutica",
+      "ubicacion": "Bucaramanga Colombia "
+    },
+    {
+      "nombre": "SteelStrong Construcciones ",
+      "sector": "Construucción (Acero)",
+      "ubicacion": "Pereira Colombia "
+    },
+    {
+      "nombre": "PlastiCycle y Residuos ",
+      "sector": "Reciclaje y Residuos ",
+      "ubicacion": "Manizales Colombia"
+    },
+    {
+      "nombre": "TextilVerde Ltda",
+      "sector": "Manufactura Textil ",
+      "ubicacion": "Cúcuta Colombia "
+    },
+    {
+      "nombre": "FoodChain Logistics ",
+      "sector": "Logística Alimentaria ",
+      "ubicacion": "Ibague Colombia "
+    },
+    {
+      "nombre": "ForestGuard Timber ",
+      "sector": "Silvicultura y Madera",
+      "ubicacion": "Popayán Colombia "
+    },
+    {
+      "nombre": "DataCloud Services ",
+      "sector": "Centro de Datos ",
+      "ubicacion": "Pasto Colombia "
+    },
+    {
+      "nombre": "TourEco Adventures ",
+      "sector": "Turismo Sostenible ",
+      "ubicacion": "Santa Marta Colombia"
+    },
+    {
+      "nombre": "Minería Sostenible del Oriente ",
+      "sector": "Minería ",
+      "ubicacion": "Riohacha Colombia "
+    },
+    {
+      "nombre": "SmartBuild Prefabricados ",
+      "sector": "Manufactura (prefabricados)",
+      "ubicacion": "Tunja Colombia "
+    },
+    {
+      "nombre": "Oceanic Harvest ",
+      "sector": "Pesca y Acuicultura ",
+      "ubicacion": "Buenaventura Colombia "
+    },
+    {
+      "nombre": "Oceanic Harvest ",
+      "sector": "Pesca y Acuicultura ",
+      "ubicacion": "Buenaventura Colombia "
+    },
+    {
+      "nombre": "Oceanic Harvest ",
+      "sector": "Pesca y Acuicultura ",
+      "ubicacion": "Cartagena Colombia "
+    },
+    {
+      "nombre": "EcoTech",
+      "sector": "tecnología",
+      "ubicacion": "Bogotá "
+    },
+    {
+      "nombre": "EcoTech",
+      "nit": "20095315",
+      "sector": "Transporte Urbano"
+    },
+    {
+      "nombre": "Oceanic Harvest ",
+      "nit": "41732334",
+      "sector": "Transporte Urbano"
+    },
+    {
+      "nombre": "BioTech",
+      "nit": "79134777",
+      "sector": "Transporte Urbano"
+    },
+    {
+      "nombre": "transportes garcía ",
+      "nit": "3103105124",
+      "sector": "Transporte Urbano"
+    }
+  ],
+  "emisiones": [
+    {
+      "empresa": "EcoTech",
+      "fecha": "2025-07-11",
+      "alcance": "1",
+      "tipo_gei": "CO₂",
+      "cantidad": "4.5",
+      "fuente": "transporte"
+    },
+    {
+      "empresa": "BioTech",
+      "fecha": "2025-07-11",
+      "alcance": "2",
+      "tipo_gei": "CO₂",
+      "cantidad": "6.2",
+      "fuente": "energia"
+    },
+    {
+      "empresa": "EcoTech",
+      "fecha": "2025-07-11",
+      "alcance": "3",
+      "tipo_gei": "CH₄",
+      "cantidad": "1.2",
+      "fuente": "residuos"
+    },
+    {
+      "empresa": "livetech",
+      "fecha": "2025-07-11",
+      "alcance": "3",
+      "tipo_gei": "CO₂",
+      "cantidad": "1.5",
+      "fuente": "energia"
+    },
+    {
+      "empresa": "GreenHarvest Agro ",
+      "fecha": "2025-07-14",
+      "alcance": "2",
+      "tipo_gei": "CO₂",
+      "cantidad": "25.0",
+      "fuente": "Consumo de energía en invernaderos "
+    },
+    {
+      "empresa": "SolarBright Energy ",
+      "fecha": "2025-07-14",
+      "alcance": "1",
+      "tipo_gei": "N₂O",
+      "cantidad": "4.1",
+      "fuente": "Fugas aSF6 en equipos eléctricos "
+    },
+    {
+      "empresa": "AquaFlow Utilities ",
+      "fecha": "2025-07-14",
+      "alcance": "3",
+      "tipo_gei": "CH₄",
+      "cantidad": "9.5",
+      "fuente": "Descomposición de materia orgánica "
+    },
+    {
+      "empresa": "UrbanTransit Co",
+      "fecha": "2025-07-14",
+      "alcance": "1",
+      "tipo_gei": "CO₂",
+      "cantidad": "55.6",
+      "fuente": "Quema de diésel en autobuses "
+    },
+    {
+      "empresa": "BioPharma Innova",
+      "fecha": "2025-07-14",
+      "alcance": "2",
+      "tipo_gei": "CO₂",
+      "cantidad": "14.8",
+      "fuente": "Clefacción de oficinas y laboratorios "
+    },
+    {
+      "empresa": "SteelStrong Construcciones ",
+      "fecha": "2025-07-14",
+      "alcance": "3",
+      "tipo_gei": "CO₂",
+      "cantidad": "42.1",
+      "fuente": "Producción de acero (proveedor)"
+    },
+    {
+      "empresa": "PlastiCycle y Residuos ",
+      "fecha": "2025-07-14",
+      "alcance": "2",
+      "tipo_gei": "CO₂",
+      "cantidad": "20.3",
+      "fuente": "Consumo eléctrico en fábricas"
+    },
+    {
+      "empresa": "TextilVerde Ltda",
+      "fecha": "2025-07-14",
+      "alcance": "2",
+      "tipo_gei": "CO₂",
+      "cantidad": "20.3",
+      "fuente": "Proceso de reciclaje  (fundición) "
+    },
+    {
+      "empresa": "FoodChain Logistics ",
+      "fecha": "2025-07-14",
+      "alcance": "1",
+      "tipo_gei": "CH₄",
+      "cantidad": "8.0",
+      "fuente": "Fugas en refrigeración de almacenes "
+    },
+    {
+      "empresa": "ForestGuard Timber ",
+      "fecha": "2025-07-14",
+      "alcance": "1",
+      "tipo_gei": "CO₂",
+      "cantidad": "11.09",
+      "fuente": "Maquinaria pesada forestal"
+    },
+    {
+      "empresa": "DataCloud Services ",
+      "fecha": "2025-07-14",
+      "alcance": "2",
+      "tipo_gei": "CO₂",
+      "cantidad": "35.2",
+      "fuente": "Energía eléctrica de servidores "
+    },
+    {
+      "empresa": "eco tech ",
+      "fecha": "2025-07-25",
+      "alcance": "1",
+      "tipo_gei": "CO2",
+      "cantidad": "50",
+      "fuente": "transporte"
+    },
+    {
+      "empresa": "transportes garcía ",
+      "fecha": "2025-07-29",
+      "alcance": "3",
+      "tipo_gei": "CO2",
+      "cantidad": "1000",
+      "fuente": "transporte"
+    }
+  ]
+}

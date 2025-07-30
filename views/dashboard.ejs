@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CarbonTrack | Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <%- include('./partials/navbar.ejs') %>
+
+  <main class="container">
+    <h2>Dashboard de Emisiones</h2>
+    <canvas id="porEmpresa" width="400" height="200"></canvas>
+    <canvas id="porTipoGEI" width="400" height="200"></canvas>
+  </main>
+
+  <%- include('./partials/footer.ejs') %>
+
+  <script>
+    fetch('/emisiones-data')
+      .then(res => res.json())
+      .then(data => {
+        if (!Array.isArray(data) || data.length === 0) {
+          alert('No hay datos de emisiones para mostrar.');
+          return;
+        }
+
+        const porEmpresa = {};
+        const porTipoGEI = { CO2: 0, CH4: 0, N2O: 0 };
+
+        data.forEach(e => {
+          const empresa = e.empresa || 'Desconocida';
+          const tipo = e.tipo_gei?.toUpperCase?.() || 'OTRO';
+          const cantidad = parseFloat(e.cantidad) || 0;
+
+          porEmpresa[empresa] = (porEmpresa[empresa] || 0) + cantidad;
+
+          if (porTipoGEI[tipo] !== undefined) {
+            porTipoGEI[tipo] += cantidad;
+          }
+        });
+
+        // Gráfico por Empresa
+        new Chart(document.getElementById('porEmpresa'), {
+          type: 'bar',
+          data: {
+            labels: Object.keys(porEmpresa),
+            datasets: [{
+              label: 'Total CO₂e por Empresa',
+              data: Object.values(porEmpresa),
+              backgroundColor: 'rgba(30, 146, 119, 0.7)',
+              borderColor: 'rgba(30, 146, 119, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: { beginAtZero: true }
+            }
+          }
+        });
+
+        // Gráfico por tipo de GEI
+        new Chart(document.getElementById('porTipoGEI'), {
+          type: 'pie',
+          data: {
+            labels: ['CO₂', 'CH₄', 'N₂O'],
+            datasets: [{
+              data: [porTipoGEI.CO2, porTipoGEI.CH4, porTipoGEI.N2O],
+              backgroundColor: ['#1e9277', '#f2a900', '#d9534f']
+            }]
+          },
+          options: {
+            responsive: true
+          }
+        });
+
+      })
+      .catch(err => {
+        console.error('Error al cargar datos de emisiones:', err);
+        alert('No se pudieron cargar los datos del servidor.');
+      });
+  </script>
+</body>
+</html>
+
+
+
+

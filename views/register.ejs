@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CarbonTrack | Registro</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/727/727803.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      backdrop-filter: brightness(0.9);
+    }
+    .container {
+      background: rgba(255,255,255,0.95);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 340px;
+    }
+    h2 {
+      margin-bottom: 24px;
+      color: #1d3557;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #2a9d8f;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    a {
+      display: block;
+      margin-top: 12px;
+      text-decoration: none;
+      color: #1d3557;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Crear cuenta</h2>
+    <form action="/signup" method="POST">
+      <input type="text" name="name" placeholder="Nombre completo" required />
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <input type="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Registrarse</button>
+    </form>
+    <a href="/">¿Ya tienes cuenta? Inicia sesión</a>
+  </div>
+</body>
+</html>

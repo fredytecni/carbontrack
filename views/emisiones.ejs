@@ -1,0 +1,88 @@
+<!--
+  Proyecto: CarbonTrack
+  Autor: Fredy Prieto Piñeros - Aprendiz SENA
+  Descripción: Vista para registrar emisiones de gases de efecto invernadero
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarbonTrack | Registrar Emisiones</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url('/img/naturaleza-fondo.jpg'); background-size: cover; background-attachment: fixed;">
+
+  <!-- Barra de navegación -->
+  <%- include('partials/navbar') %>
+
+  <main class="container form-card">
+    <h2>Registro de Emisiones</h2>
+    <form action="/emisiones" method="POST">
+      <!-- Empresa seleccionada desde la lista de empresas registradas -->
+      <label for="empresa">Empresa:</label>
+      <select name="empresa" required>
+        <% empresas.forEach(function(emp) { %>
+          <option value="<%= emp.nombre %>"><%= emp.nombre %></option>
+        <% }) %>
+      </select>
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" name="fecha" required />
+
+      <label for="alcance">Alcance:</label>
+      <select name="alcance" required>
+        <option value="1">Alcance 1: Emisiones directas</option>
+        <option value="2">Alcance 2: Emisiones indirectas (energía)</option>
+        <option value="3">Alcance 3: Otras emisiones indirectas</option>
+      </select>
+
+      <label for="tipo_gei">Tipo de GEI:</label>
+      <select name="tipo_gei" required>
+        <option value="CO2">CO₂</option>
+        <option value="CH4">CH₄</option>
+        <option value="N2O">N₂O</option>
+      </select>
+
+      <label for="cantidad">Cantidad (kg CO₂e):</label>
+      <input type="number" name="cantidad" step="0.01" required />
+
+      <label for="fuente">Fuente de emisión:</label>
+      <input type="text" name="fuente" placeholder="Ej: Combustión, transporte..." required />
+
+      <button type="submit">Guardar Emisión</button>
+    </form>
+
+    <!-- Botón para descargar informe PDF con recomendaciones de IA -->
+    <hr>
+    <h3>Generar Informe PDF</h3>
+    <form action="/descargar-informe/" method="GET" onsubmit="event.preventDefault(); descargarPDF();">
+      <label for="empresaPdf">Selecciona empresa:</label>
+      <select id="empresaPdf">
+        <% empresas.forEach(function(emp) { %>
+          <option value="<%= emp.nombre %>"><%= emp.nombre %></option>
+        <% }) %>
+      </select>
+      <button type="submit">Descargar PDF</button>
+    </form>
+  </main>
+
+  <!-- Pie de página -->
+  <%- include('partials/footer') %>
+
+  <!-- Script para descargar el PDF de la empresa seleccionada -->
+  <script>
+    function descargarPDF() {
+      const empresa = document.getElementById('empresaPdf').value;
+      window.location.href = `/descargar-informe/${encodeURIComponent(empresa)}`;
+    }
+  </script>
+
+</body>
+</html>
+
+
+

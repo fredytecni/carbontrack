@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CarbonTrack | Empresas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: url('/img/fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    main {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    h2, h3 {
+      text-align: center;
+      color: #1d3557;
+    }
+    form input {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #2a9d8f;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: #f2f2f2;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <%- include('partials/navbar') %>
+
+  <main>
+    <h2>Registro de Empresas</h2>
+    <form action="/empresas" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre de la empresa" required>
+      <input type="text" name="nit" placeholder="NIT" required>
+      <input type="text" name="sector" placeholder="Sector productivo" required>
+      <button type="submit">Registrar Empresa</button>
+    </form>
+
+    <h3>Empresas Registradas</h3>
+    <ul>
+      <% empresas.forEach(emp => { %>
+        <li>
+          <strong><%= emp.nombre %></strong> | NIT: <%= emp.nit %> | Sector: <%= emp.sector %>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+
+  <%- include('partials/footer') %>
+
+</body>
+</html>
+
+
